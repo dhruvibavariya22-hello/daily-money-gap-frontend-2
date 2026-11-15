@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Money Gap</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Daily Money Gap</h1>
+    <p>Manage your money. Plan your future.</p>
+  </header>
+
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#budget">Budget</a>
+    <a href="#expenses">Expenses</a>
+    <a href="#savings">Savings</a>
+  </nav>
+
+  <main>
+    <section id="dashboard">
+      <h2>My Dashboard</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Monthly Income</h3>
+          <p id="income">₹0</p>
+        </div>
+        <div class="card">
+          <h3>Total Expenses</h3>
+          <p id="total">₹0</p>
+        </div>
+        <div class="card">
+          <h3>Remaining Balance</h3>
+          <p id="balance">₹0</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="budget">
+      <h2>Monthly Budget</h2>
+      <input id="incomeInput" type="number"
+        placeholder="Enter monthly income">
+      <button onclick="setIncome()">Save Income</button>
+      <div class="cards">
+        <div class="card">Needs: 50%</div>
+        <div class="card">Wants: 30%</div>
+        <div class="card">Savings: 20%</div>
+      </div>
+    </section>
+
+    <section id="expenses">
+      <h2>Add Daily Expense</h2>
+      <input id="expenseName" placeholder="Expense name">
+      <input id="expenseAmount" type="number"
+        placeholder="Amount">
+      <select id="category">
+        <option>Needs</option>
+        <option>Wants</option>
+        <option>Savings & Debt</option>
+      </select>
+      <button onclick="addExpense()">Add Expense</button>
+      <ul id="expenseList"></ul>
+    </section>
+
+    <section id="savings">
+      <h2>My Savings</h2>
+      <p>Monthly savings target (20%):</p>
+      <h3 id="savingsTarget">₹0</h3>
+    </section>
+  </main>
+
+  <footer>
+    <p>Daily Money Gap © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
